@@ -4,10 +4,18 @@ import java.util.Collection;
 import java.util.LinkedHashSet;
 import java.util.ArrayList;
 
+public class Node{
+    V value;
+    //LinkedList<Nodes>;//...
+    //Use hashset not linkedlist or arraylist
+    boolean terminal;
+    
+}
+
 public final class MyMap<K,V> implements Map<K,V> {
     public Set<Entry<K,V>> entries = new LinkedHashSet<Entry<K,V>>();
     int size;
-    
+    //COnstructor creates root
     //testing github 
     public static void main(String[] args){
     }
