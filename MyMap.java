@@ -13,7 +13,7 @@ public final class MyMap<K,V> implements Map<K,V> {
     //Constructor creates root
     //testing github 
     public static void main(String[] args){
-<<<<<<< HEAD
+	/*
 	entries.put("apple", 1);
 	entries.put("banana", 2);
 	entries.put("strawberry", 3);
@@ -23,8 +23,8 @@ public final class MyMap<K,V> implements Map<K,V> {
 	System.out.println(entries.get("apple"));
 	System.out.println(entries.get("banana"));
 	System.out.println(entries.containsValue("peach"));
-=======
->>>>>>> dee797e69800150c2b8dc8a6109f86243c8e00c8
+	*/
+
     }
     
     public int size() {
@@ -65,7 +65,8 @@ public final class MyMap<K,V> implements Map<K,V> {
     }
 
     public V put(final K key, final V value) {
-	LinkedHashSet<Node> singleNode = new LinkedHashSet<Node>();
+	//LinkedHashSet<Node> singleNode = new LinkedHashSet<Node>();
+	HashMap<K, Node> next = new HashMap<K, Node>();
 	return null;
     }
 

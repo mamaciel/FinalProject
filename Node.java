@@ -1,6 +1,12 @@
 import java.util.*;
 public class Node<K,V>{
+    K value;
+    V value;
     boolean terminal;
-    V Value;
-    LinkedHashSet<Node> singleNode;
+    
+    HashMap<K, Node> next;
+
+    Node getNext(K nextkey){
+	return next.get(nextKey);
+    }
 }
