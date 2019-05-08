@@ -4,18 +4,10 @@ import java.util.Collection;
 import java.util.LinkedHashSet;
 import java.util.ArrayList;
 
-public class Node{
-    V value;
-    //LinkedList<Nodes>;//...
-    //Use hashset not linkedlist or arraylist
-    boolean terminal;
-    
-}
-
 public final class MyMap<K,V> implements Map<K,V> {
     public Set<Entry<K,V>> entries = new LinkedHashSet<Entry<K,V>>();
     int size;
-  
+
     //Constructor creates root
     //testing github 
     public static void main(String[] args){
@@ -50,16 +42,29 @@ public final class MyMap<K,V> implements Map<K,V> {
     }
 
     public void putAll(final Map<? extends K, ? extends V> map) {
-
+	for(Entry<? extends K, ? extends V> entry : map.entrySet()){
+	    checkArgument(apply(entry.getKey(), entry.getValue()));
+	}
+	unfiltered.putAll(map):
     }
 
     public V remove(final Object key) {
+	
 	return null;
     }
 
     public V put(final K key, final V value) {
 	//returns old value after insertion
-	return null;
+	int keyBucket = hash(key);
+	Entry<K, V> temp = table[keyBucket];
+	while(temp != null){
+	    if((temp.key == null && key == null) || (temp.key != null && temp.key.equals(key))){
+		temp.value = value;
+		return null;
+	    }
+	    temp = temp.next;
+	}
+	entries[keyBucket] = new HashMapEntry<K, V>(key, value, entries[keyBucket]);
     }
 
     public V get(final Object key) {
