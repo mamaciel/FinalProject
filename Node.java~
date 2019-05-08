@@ -1,4 +1,17 @@
-public class Node{
-    public boolean terminal;
-    public Value V;
+import java.util.*;
+public class Node<V>{
+    private Node<V> rootNode;
+
+    public Node(V rootData){
+	root = new Node<V>();
+	root.data = rootData;
+	root.children = new HashSet<Node<V>>();
+    }
+    
+    public static class Node<V>{
+	private V data;
+	private Node<V> parent;
+	private Set<Node<V>> children;
+    }
+
 }
