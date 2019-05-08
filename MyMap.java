@@ -13,6 +13,7 @@ public final class MyMap<K,V> implements Map<K,V> {
     //Constructor creates root
     //testing github 
     public static void main(String[] args){
+<<<<<<< HEAD
 	entries.put("apple", 1);
 	entries.put("banana", 2);
 	entries.put("strawberry", 3);
@@ -22,6 +23,8 @@ public final class MyMap<K,V> implements Map<K,V> {
 	System.out.println(entries.get("apple"));
 	System.out.println(entries.get("banana"));
 	System.out.println(entries.containsValue("peach"));
+=======
+>>>>>>> dee797e69800150c2b8dc8a6109f86243c8e00c8
     }
     
     public int size() {
@@ -54,10 +57,6 @@ public final class MyMap<K,V> implements Map<K,V> {
     }
 
     public void putAll(final Map<? extends K, ? extends V> map) {
-	for(Entry<? extends K, ? extends V> entry : map.entrySet()){
-	    checkArgument(apply(entry.getKey(), entry.getValue()));
-	}
-	unfiltered.putAll(map):
     }
 
     public V remove(final Object key) {
@@ -66,24 +65,11 @@ public final class MyMap<K,V> implements Map<K,V> {
     }
 
     public V put(final K key, final V value) {
-	//returns old value after insertion
-	int keyBucket = hash(key);
-	Entry<K, V> temp = table[keyBucket];
-	while(temp != null){
-	    if((temp.key == null && key == null) || (temp.key != null && temp.key.equals(key))){
-		temp.value = value;
-		return null;
-	    }
-	    temp = temp.next;
-	}
-	entries[keyBucket] = new HashMapEntry<K, V>(key, value, entries[keyBucket]);
+	LinkedHashSet<Node> singleNode = new LinkedHashSet<Node>();
+	return null;
     }
 
     public V get(final Object key) {
-	Entry<K, V> entries = get(key);
-	if(entries != null){
-	    return entries.value;
-	}
 	return null;
     }
 
@@ -92,9 +78,7 @@ public final class MyMap<K,V> implements Map<K,V> {
     }
 
     public boolean containsKey(Object key) {
-	Entry<K, V> entries = get(key);
-	return entries != null;
-	//	return false;
+	return false;
     }
 
     public boolean isEmpty() {
