@@ -1,5 +1,6 @@
+import java.util.*;
 public class Node{
-    V value;
-    
+     Set<V> value;
+    HashSet<Node> s = new HashSet<Node>();
     boolean terminal;
 }
