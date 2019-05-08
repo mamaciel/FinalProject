@@ -17,7 +17,7 @@ public class Node<K,V>{
     void setVal(V value){
 	this.value = value;
     }
-    void setNext(HashMap<K, Node> next){
-	this.next = next;
+    void setNext(K key){
+	this.key = key;
     }
 }
