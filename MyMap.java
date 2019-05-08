@@ -6,7 +6,9 @@ import java.util.ArrayList;
 
 public final class MyMap<K,V> implements Map<K,V> {
     public Set<Entry<K,V>> entries = new LinkedHashSet<Entry<K,V>>();
-    int size;
+    private int size = 0;
+    private Node root = null;
+    
 
     //Constructor creates root
     //testing github 
@@ -14,6 +16,9 @@ public final class MyMap<K,V> implements Map<K,V> {
 	entries.put("apple", 1);
 	entries.put("banana", 2);
 	entries.put("strawberry", 3);
+	entries.put("avocado", 4);
+	entries.put("band", 5);
+	entries.put("bang", 6);
 	System.out.println(entries.get("apple"));
 	System.out.println(entries.get("banana"));
 	System.out.println(entries.containsValue("peach"));
@@ -36,7 +41,8 @@ public final class MyMap<K,V> implements Map<K,V> {
     }
 
     public void clear() {
-
+	size = 0;
+	root = null;
     }
 
     public Collection<V> values() {

@@ -11,6 +11,12 @@ public final class MyMap<K,V> implements Map<K,V> {
     //Constructor creates root
     //testing github 
     public static void main(String[] args){
+	entries.put("apple", 1);
+	entries.put("banana", 2);
+	entries.put("strawberry", 3);
+	System.out.println(entries.get("apple"));
+	System.out.println(entries.get("banana"));
+	System.out.println(entries.containsValue("peach"));
     }
     
     public int size() {

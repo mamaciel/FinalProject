@@ -1,17 +1,17 @@
 import java.util.*;
-public class Node<V>{
-    private Node<V> rootNode;
 
-    public Node(V rootData){
-	root = new Node<V>();
-	root.data = rootData;
-	root.children = new HashSet<Node<V>>();
-    }
+public class Node{
+<<<<<<< HEAD
+<<<<<<< HEAD
+    public boolean terminal;
+    V Value;
+=======
+    V value;
     
-    public static class Node<V>{
-	private V data;
-	private Node<V> parent;
-	private Set<Node<V>> children;
-    }
-
+=======
+    Set<V> value;
+    HashSet<Node> s = new HashSet<Node>();
+>>>>>>> 1c93b3552b1de75644accdee6d7ddee6d35ea930
+    boolean terminal;
+>>>>>>> 8d5a7f38b819bb54a82f2116fccf2a8f3d89ab97
 }
