@@ -68,6 +68,10 @@ public final class MyMap<K,V> implements Map<K,V> {
     }
 
     public V get(final Object key) {
+	Entry<K, V> entries = get(key);
+	if(entries != null){
+	    return entries.value;
+	}
 	return null;
     }
 
@@ -76,7 +80,9 @@ public final class MyMap<K,V> implements Map<K,V> {
     }
 
     public boolean containsKey(Object key) {
-	return false;
+	Entry<K, V> entries = get(key);
+	return entries != null;
+	//	return false;
     }
 
     public boolean isEmpty() {
