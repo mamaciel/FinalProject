@@ -1,22 +1,32 @@
 import java.util.Map;
 import java.util.Set;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.LinkedHashSet;
 import java.util.ArrayList;
 
 public final class MyMap<K,V> implements Map<K,V> {
     public Set<Entry<K,V>> entries = new LinkedHashSet<Entry<K,V>>();
-    int size;
+    private int size = 0;
+    private Node root = null;
+    
+    
 
     //Constructor creates root
     //testing github 
     public static void main(String[] args){
+	/*
 	entries.put("apple", 1);
 	entries.put("banana", 2);
 	entries.put("strawberry", 3);
+	entries.put("avocado", 4);
+	entries.put("band", 5);
+	entries.put("bang", 6);
 	System.out.println(entries.get("apple"));
 	System.out.println(entries.get("banana"));
 	System.out.println(entries.containsValue("peach"));
+	*/
+
     }
     
     public int size() {
@@ -36,7 +46,8 @@ public final class MyMap<K,V> implements Map<K,V> {
     }
 
     public void clear() {
-
+	size = 0;
+	root = null;
     }
 
     public Collection<V> values() {
@@ -48,10 +59,6 @@ public final class MyMap<K,V> implements Map<K,V> {
     }
 
     public void putAll(final Map<? extends K, ? extends V> map) {
-	for(Entry<? extends K, ? extends V> entry : map.entrySet()){
-	    checkArgument(apply(entry.getKey(), entry.getValue()));
-	}
-	unfiltered.putAll(map):
     }
 
     public V remove(final Object key) {
@@ -60,24 +67,18 @@ public final class MyMap<K,V> implements Map<K,V> {
     }
 
     public V put(final K key, final V value) {
-	//returns old value after insertion
-	int keyBucket = hash(key);
-	Entry<K, V> temp = table[keyBucket];
-	while(temp != null){
-	    if((temp.key == null && key == null) || (temp.key != null && temp.key.equals(key))){
-		temp.value = value;
-		return null;
-	    }
-	    temp = temp.next;
+	//LinkedHashSet<Node> singleNode = new LinkedHashSet<Node>();
+	HashMap<K, Node> next = new HashMap<K, Node>();
+	//HashMap<K, V> next = new HashMap<K, V>();
+	next.setVal(value);
+	if(key == (int)key){
+	    Node<Integer, Integer> next = new Node<Integer, Integer>(key, value); 
 	}
-	entries[keyBucket] = new HashMapEntry<K, V>(key, value, entries[keyBucket]);
+ 	size++;
+	return null;
     }
 
     public V get(final Object key) {
-	Entry<K, V> entries = get(key);
-	if(entries != null){
-	    return entries.value;
-	}
 	return null;
     }
 
@@ -86,9 +87,7 @@ public final class MyMap<K,V> implements Map<K,V> {
     }
 
     public boolean containsKey(Object key) {
-	Entry<K, V> entries = get(key);
-	return entries != null;
-	//	return false;
+	return false;
     }
 
     public boolean isEmpty() {

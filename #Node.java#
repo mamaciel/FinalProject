@@ -5,8 +5,12 @@ public class Node<K,V>{
     boolean terminal;
     
     //HashMap<K, Node> next;
+<<<<<<< HEAD
     HashMap<K, V> next;
 
+=======
+    private HashMap<K, V> next;
+>>>>>>> 9b3a44256fd61fcf4f0984bffae8a2b24db4c7ce
     //Node getNext(K nextKey){
 	//return next.get(nextKey);
 	
@@ -16,14 +20,18 @@ public class Node<K,V>{
 	return this.value;
     }
 
+<<<<<<< HEAD
     public K getKey(){
 	return this.key;
     }
 
+=======
+>>>>>>> 9b3a44256fd61fcf4f0984bffae8a2b24db4c7ce
     //public void setVal(K key, V value){
     //	this.value = value;
     //	this.key = key;
     //}
+<<<<<<< HEAD
 
     public void setVal(V value){
     	this.value = value;
@@ -31,5 +39,13 @@ public class Node<K,V>{
 
     public void setNext(K key){
 	this.key = key;
+=======
+    public void setVal(V value){
+    	this.value = value;
+    }
+    public void setNext(K key){
+	this.key = key;
+	
+>>>>>>> 9b3a44256fd61fcf4f0984bffae8a2b24db4c7ce
     }
 }

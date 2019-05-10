@@ -78,8 +78,10 @@ public final class MyMap<K,V> implements Map<K,V> {
 	HashMap<K, Node> next = new HashMap<K, Node>();
 	//HashMap<K, V> next = new HashMap<K, V>();
 	next.setVal(value);
-
-	size++;
+	if(key == (int)key){
+	    Entry<Integer, Intger> next = new Node<Integer, Integer>(key, value); 
+	}
+ 	size++;
 	return null;
     }
 
