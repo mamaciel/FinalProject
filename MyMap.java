@@ -34,12 +34,16 @@ public final class MyMap<K,V> implements Map<K,V> {
     }
     
     public Set<Entry<K, V>> entrySet() {
+
 	return entries;
     }
-
+    
+    //Returns a set of all the keys from the hashmap
     public Set<K> keySet() {
+	//Set<K> keys = new LinkedHashSet<>();
+
 	Set<K> keys = new LinkedHashSet<>();
-	for(Entry<K,V> entry: entries) {
+	for(Entry<K, V> entry: entries) {
 	    keys.add(entry.getKey());
 	}
 	return keys;
@@ -50,6 +54,7 @@ public final class MyMap<K,V> implements Map<K,V> {
 	root = null;
     }
 
+    //Returns a collections with all values
     public Collection<V> values() {
 	Collection<V> vals = new ArrayList<V>();
 	for(Entry<K,V> entry : entries) {
@@ -57,10 +62,12 @@ public final class MyMap<K,V> implements Map<K,V> {
 	}
 	return vals;
     }
-
+    
+    //Copies all the elements of a map to another specific map
     public void putAll(final Map<? extends K, ? extends V> map) {
     }
 
+    //
     public V remove(final Object key) {
 	
 	return null;
