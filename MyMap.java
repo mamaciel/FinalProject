@@ -86,18 +86,13 @@ public final class MyMap<K,V> implements Map<K,V> {
     
     public V put(final K key, final V value) {
 	//LinkedHashSet<Node> singleNode = new LinkedHashSet<Node>();
-	HashMap<K, Node> next = new HashMap<K, Node>();
-	//HashMap<K, V> next = new HashMap<K, V>();
+	HashMap<K, Node> nexts = new HashMap<K, Node>();
 	next.setVal(value);
 
 	for (Entry<K, V> entry : entries){
 	    
 	}
-    
 	
-	//if(key == (int)key){
-	// Entry<Integer, Intger> next = new Node<Integer, Integer>(key, value); 
-	//}
  	size++;
 	return null;
     }
