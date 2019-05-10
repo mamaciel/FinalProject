@@ -1,6 +1,7 @@
 import java.util.Map;
 import java.util.Set;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.LinkedHashSet;
 import java.util.ArrayList;
 
@@ -8,6 +9,7 @@ public final class MyMap<K,V> implements Map<K,V> {
     public Set<Entry<K,V>> entries = new LinkedHashSet<Entry<K,V>>();
     private int size = 0;
     private Node root = null;
+    
     
 
     //Constructor creates root
@@ -67,6 +69,10 @@ public final class MyMap<K,V> implements Map<K,V> {
     public V put(final K key, final V value) {
 	//LinkedHashSet<Node> singleNode = new LinkedHashSet<Node>();
 	HashMap<K, Node> next = new HashMap<K, Node>();
+	//HashMap<K, V> next = new HashMap<K, V>();
+	next.setVal(value);
+
+	size++;
 	return null;
     }
 

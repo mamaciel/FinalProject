@@ -4,20 +4,25 @@ public class Node<K,V>{
     V value;
     boolean terminal;
     
-    HashMap<K, Node> next;
+    //HashMap<K, Node> next;
+    HashMap<K, V> next;
+    //Node getNext(K nextKey){
+	//return next.get(nextKey);
+	
+    //}
     
-    Node getNext(K nextKey){
-	return next.get(nextKey);
-    }
-    
-    V getVal(){
+    public V getVal(){
 	return this.value;
     }
-    
-    void setVal(V value){
-	this.value = value;
+
+    //public void setVal(K key, V value){
+    //	this.value = value;
+    //	this.key = key;
+    //}
+    public void setVal(V value){
+    	this.value = value;
     }
-    void setNext(K key){
+    public void setNext(K key){
 	this.key = key;
     }
 }
