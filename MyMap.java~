@@ -34,12 +34,14 @@ public final class MyMap<K,V> implements Map<K,V> {
     }
     
     public Set<Entry<K, V>> entrySet() {
+
 	return entries;
     }
-
+    
+    //Returns a set of all the keys from the hashmap
     public Set<K> keySet() {
 	Set<K> keys = new LinkedHashSet<>();
-	for(Entry<K,V> entry: entries) {
+	for(Entry<K, V> entry: entries) {
 	    keys.add(entry.getKey());
 	}
 	return keys;
@@ -50,6 +52,7 @@ public final class MyMap<K,V> implements Map<K,V> {
 	root = null;
     }
 
+    //Returns a collections with all values
     public Collection<V> values() {
 	Collection<V> vals = new ArrayList<V>();
 	for(Entry<K,V> entry : entries) {
@@ -57,12 +60,18 @@ public final class MyMap<K,V> implements Map<K,V> {
 	}
 	return vals;
     }
-
+    
+    //Copies all the elements of a map to another specific map
     public void putAll(final Map<? extends K, ? extends V> map) {
     }
 
     public V remove(final Object key) {
-	
+	for(Entry<K, V> entry : entries){
+	    if(entry.getKey().equals(key)){
+		entry = null;
+		size--;
+	    }
+	}
 	return null;
     }
 
@@ -71,14 +80,25 @@ public final class MyMap<K,V> implements Map<K,V> {
 	HashMap<K, Node> next = new HashMap<K, Node>();
 	//HashMap<K, V> next = new HashMap<K, V>();
 	next.setVal(value);
-	if(key == (int)key){
-	    Node<Integer, Integer> next = new Node<Integer, Integer>(key, value); 
+
+	for (Entry<K, V> entry : entries){
+	    
 	}
+    
+	
+	//if(key == (int)key){
+	// Entry<Integer, Intger> next = new Node<Integer, Integer>(key, value); 
+	//}
  	size++;
 	return null;
     }
 
-    public V get(final Object key) {
+    public V get(final Object key){
+	for (Entry<K, V> entry : entries){
+	    if(entry == key){
+		return entry.getValue();
+	    }
+	}
 	return null;
     }
 
