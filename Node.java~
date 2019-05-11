@@ -9,8 +9,8 @@ public class Node<K,V>{
     HashMap<K, Node> nexts;
     //HashMap<K, V> next;
 
-    public Node(Character a, int value){
-	nexts.put(a, value);
+    public Node(Character a){
+	this.a = a;
     }
 
     //public boolean hasNext(Character C){
