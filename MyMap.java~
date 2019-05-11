@@ -15,12 +15,16 @@ import java.util.ArrayList;
 public final class MyMap<K,V> implements Map<K,V> {
     public Set<Entry<K,V>> entries = new LinkedHashSet<Entry<K,V>>();
     private int size = 0;
-    private Node root = null;
+
     
     //main that tests the methods
     public static void main(String[] args){
 	
+<<<<<<< HEAD
+	root.nexts.put("apple", 1);
+=======
 	//root.nexts.put("apple", 1);
+>>>>>>> 469033a393af0c6f159e5558ad17e1743381098e
 	/*entries.put("banana", 2);
 	entries.put("strawberry", 3);
 	entries.put("avocado", 4);
