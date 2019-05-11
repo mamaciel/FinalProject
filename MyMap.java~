@@ -15,13 +15,13 @@ import java.util.ArrayList;
 public final class MyMap<K,V> implements Map<K,V> {
     public Set<Entry<K,V>> entries = new LinkedHashSet<Entry<K,V>>();
     private int size = 0;
-    private Node root = null;
+
     
     //main that tests the methods
     public static void main(String[] args){
-	/*
-	entries.put("apple", 1);
-	entries.put("banana", 2);
+	
+	root.nexts.put("apple", 1);
+	/*entries.put("banana", 2);
 	entries.put("strawberry", 3);
 	entries.put("avocado", 4);
 	entries.put("band", 5);
@@ -30,7 +30,6 @@ public final class MyMap<K,V> implements Map<K,V> {
 	System.out.println(entries.get("banana"));
 	System.out.println(entries.containsValue("peach"));
 	*/
-
     }
     
     //return the size
@@ -91,11 +90,7 @@ public final class MyMap<K,V> implements Map<K,V> {
 	}
 	//LinkedHashSet<Node> singleNode = new LinkedHashSet<Node>();
 	HashMap<K, Node> nexts = new HashMap<K, Node>();
-<<<<<<< HEAD
 	//next.setVal(value);
-=======
-	next.setVal(value);
->>>>>>> 4f2b6dbca5afa7a2f747516cf9535248864a4698
 
 	for (Entry<K, V> entry : entries){
 	    
@@ -127,8 +122,14 @@ public final class MyMap<K,V> implements Map<K,V> {
 
     //checks if the tree is empty
     public boolean isEmpty() {
-	return false;
+	if(root == null)
+	    {
+		return true;
+	    }
+	else
+	    {
+		return false;
+	    }
     }
-    
 	
 }
