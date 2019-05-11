@@ -88,12 +88,18 @@ public final class MyMap<K,V> implements Map<K,V> {
 	String keyString = key.toString();
 	for(int i = 0;i < keyString.length();i++){
 	    char a = keyString.charAt(i);
-	    //Node<K, V> temp = new Node<Character, V>(a);
-	    Node<K, V> temp = new Node<>(a);
+	    Node temp = new Node<Character, V>(a);
+	    HashMap<K, V> tempNexts = temp.getNexts();
+	    //Node<K, V> temp = new Node<>(a);
+	    if(tempNexts.containsKey(a)){
+		temp = temp.setNext(new Node(a)); 
+	    }else{
+		//temp = temp.setNext(
+	    }
 	}
 	//temp.setVal(value);
 	//LinkedHashSet<Node> singleNode = new LinkedHashSet<Node>();
-	HashMap<K, Node> nexts = new HashMap<K, Node>();
+	//HashMap<K, Node> nexts = new HashMap<K, Node>();
 	//next.setVal(value);
 
 	for (Entry<K, V> entry : entries){

@@ -15,16 +15,13 @@ import java.util.ArrayList;
 public final class MyMap<K,V> implements Map<K,V> {
     public Set<Entry<K,V>> entries = new LinkedHashSet<Entry<K,V>>();
     private int size = 0;
-
+    private Node<K, V> root = null;
     
+
     //main that tests the methods
     public static void main(String[] args){
 	
-<<<<<<< HEAD
-	root.nexts.put("apple", 1);
-=======
 	//root.nexts.put("apple", 1);
->>>>>>> 469033a393af0c6f159e5558ad17e1743381098e
 	/*entries.put("banana", 2);
 	entries.put("strawberry", 3);
 	entries.put("avocado", 4);
@@ -91,10 +88,18 @@ public final class MyMap<K,V> implements Map<K,V> {
 	String keyString = key.toString();
 	for(int i = 0;i < keyString.length();i++){
 	    char a = keyString.charAt(i);
-	    Node temp = new Node<Character, V>(a, value);
+	    Node temp = new Node<Character, V>(a);
+	    HashMap<K, V> tempNexts = temp.getNexts();
+	    //Node<K, V> temp = new Node<>(a);
+	    if(tempNexts.containsKey(a)){
+		temp = temp.setNext(new Node<Character, Node>(a)); 
+	    }else{
+		//temp = temp.setNext(
+	    }
 	}
+	//temp.setVal(value);
 	//LinkedHashSet<Node> singleNode = new LinkedHashSet<Node>();
-	HashMap<K, Node> nexts = new HashMap<K, Node>();
+	//HashMap<K, Node> nexts = new HashMap<K, Node>();
 	//next.setVal(value);
 
 	for (Entry<K, V> entry : entries){
