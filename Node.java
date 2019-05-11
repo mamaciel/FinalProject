@@ -3,12 +3,15 @@ public class Node<K,V>{
     K key;
     V value;
     boolean terminal;
-
+    Character a;
     //HashMap<Character, Node> nexts;
     HashMap<K, Node> root;
     HashMap<K, Node> nexts;
     //HashMap<K, V> next;
 
+    public Node(Character a){
+	this.a = a;
+    }
 
     //public boolean hasNext(Character C){
 

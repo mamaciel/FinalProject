@@ -3,18 +3,21 @@ public class Node<K,V>{
     K key;
     V value;
     boolean terminal;
-
+    Character a;
     //HashMap<Character, Node> nexts;
     HashMap<K, Node> root;
     HashMap<K, Node> nexts;
     //HashMap<K, V> next;
 
+    public Node(Character a, int value){
+	nexts.put(a, value);
+    }
 
     //public boolean hasNext(Character C){
 
     //}
     
-    Node getNext(Character nextKey){
+    public Node getNext(Character nextKey){
 	return nexts.get(nextKey);	
     }
     
