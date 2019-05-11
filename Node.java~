@@ -5,12 +5,12 @@ public class Node<K,V>{
     boolean terminal;
     Character a;
     //HashMap<Character, Node> nexts;
-    HashMap<K, Node> root;
-    HashMap<K, Node> nexts;
+    //HashMap<K, Node> root;
+    HashMap<Character, Node> nexts = new HashMap<Character, Node>();
     //HashMap<K, V> next;
 
-    public Node(Character a, int value){
-	nexts.put(a, value);
+    public Node(Character a){
+	this.a = a;
     }
 
     //public boolean hasNext(Character C){
@@ -40,5 +40,19 @@ public class Node<K,V>{
 
     public void setNext(K key){
 	this.key = key;
+	//HashMap<K, Node> nexts;
+	//nexts.put(this.key);
     }
+
+    public HashMap<K, V> getNexts(){
+	return this.nexts;
+    }
+
+    /*public boolean containsNexts(Character a, Node temp){
+	if(nexts.find(a, temp)){
+	    return true;
+	}else{
+	    return false;
+	}
+	}*/
 }

@@ -6,7 +6,7 @@ public class Node<K,V>{
     Character a;
     //HashMap<Character, Node> nexts;
     //HashMap<K, Node> root;
-    HashMap<Character, Node> nexts;
+    HashMap<Character, Node> nexts = new HashMap<Character, Node>();
     //HashMap<K, V> next;
 
     public Node(Character a){
@@ -40,5 +40,19 @@ public class Node<K,V>{
 
     public void setNext(K key){
 	this.key = key;
+	//HashMap<K, Node> nexts;
+	//nexts.put(this.key);
     }
+
+    public HashMap<Character, Node> getNexts(){
+	return this.nexts;
+    }
+
+    /*public boolean containsNexts(Character a, Node temp){
+	if(nexts.find(a, temp)){
+	    return true;
+	}else{
+	    return false;
+	}
+	}*/
 }
