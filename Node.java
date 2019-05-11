@@ -6,12 +6,23 @@ public class Node<K,V>{
     Character a;
     //HashMap<Character, Node> nexts;
     //HashMap<K, Node> root;
-    HashMap<Character, Node> nexts = new HashMap<Character, Node>();
+    //HashMap<Character, Node> nexts = new HashMap<Character, Node>();
+    HashMap<Character, Node> nexts;
+
+    Node nextNode = new Node();
     //HashMap<K, V> next;
 
+    public Node(){
+
+    }
+    
     public Node(Character a){
 	this.a = a;
     }
+
+    //public Node(HashMap<Character, Node> nexts){
+    //	this.nexts = nexts;
+    //}
 
     //public boolean hasNext(Character C){
 
