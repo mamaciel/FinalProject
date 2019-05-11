@@ -5,8 +5,8 @@ public class Node<K,V>{
     boolean terminal;
     Character a;
     //HashMap<Character, Node> nexts;
-    HashMap<K, Node> root;
-    HashMap<K, Node> nexts;
+    //HashMap<K, Node> root;
+    HashMap<Character, Node> nexts;
     //HashMap<K, V> next;
 
     public Node(Character a){

@@ -15,8 +15,9 @@ import java.util.ArrayList;
 public final class MyMap<K,V> implements Map<K,V> {
     public Set<Entry<K,V>> entries = new LinkedHashSet<Entry<K,V>>();
     private int size = 0;
-    private Node root = null;
+    private Node<K, V> root = null;
     
+
     //main that tests the methods
     public static void main(String[] args){
 	
@@ -87,8 +88,10 @@ public final class MyMap<K,V> implements Map<K,V> {
 	String keyString = key.toString();
 	for(int i = 0;i < keyString.length();i++){
 	    char a = keyString.charAt(i);
-	    Node temp = new Node<Character, V>(a);
+	    //Node<K, V> temp = new Node<Character, V>(a);
+	    Node<K, V> temp = new Node<>(a);
 	}
+	//temp.setVal(value);
 	//LinkedHashSet<Node> singleNode = new LinkedHashSet<Node>();
 	HashMap<K, Node> nexts = new HashMap<K, Node>();
 	//next.setVal(value);
