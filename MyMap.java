@@ -86,10 +86,14 @@ public final class MyMap<K,V> implements Map<K,V> {
     
     public V put(final K key, final V value) {
 	String keyString = key.toString();
+	if(key == null){
+	    
 	for(int i = 0;i < keyString.length();i++){
 	    char a = keyString.charAt(i);
 	    //Node<K, V> temp = new Node<Character, V>(a);
 	    Node<K, V> temp = new Node<>(a);
+	}
+	
 	}
 	//temp.setVal(value);
 	//LinkedHashSet<Node> singleNode = new LinkedHashSet<Node>();
