@@ -20,7 +20,7 @@ public final class MyMap<K,V> implements Map<K,V> {
     //main that tests the methods
     public static void main(String[] args){
 	
-	root.nexts.put("apple", 1);
+	//root.nexts.put("apple", 1);
 	/*entries.put("banana", 2);
 	entries.put("strawberry", 3);
 	entries.put("avocado", 4);
@@ -84,9 +84,10 @@ public final class MyMap<K,V> implements Map<K,V> {
 
     
     public V put(final K key, final V value) {
-	key.toString();
-	for(int i = 0;i < key.length();i++){
-	    Node temp = new Node<Character, V>(key.charAt(i));
+	String keyString = key.toString();
+	for(int i = 0;i < keyString.length();i++){
+	    char a = keyString.charAt(i);
+	    Node temp = new Node<Character, V>(a);
 	}
 	//LinkedHashSet<Node> singleNode = new LinkedHashSet<Node>();
 	HashMap<K, Node> nexts = new HashMap<K, Node>();
