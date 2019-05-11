@@ -91,7 +91,11 @@ public final class MyMap<K,V> implements Map<K,V> {
 	}
 	//LinkedHashSet<Node> singleNode = new LinkedHashSet<Node>();
 	HashMap<K, Node> nexts = new HashMap<K, Node>();
+<<<<<<< HEAD
 	//next.setVal(value);
+=======
+	next.setVal(value);
+>>>>>>> 4f2b6dbca5afa7a2f747516cf9535248864a4698
 
 	for (Entry<K, V> entry : entries){
 	    

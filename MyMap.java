@@ -30,7 +30,6 @@ public final class MyMap<K,V> implements Map<K,V> {
 	System.out.println(entries.get("banana"));
 	System.out.println(entries.containsValue("peach"));
 	*/
-
     }
     
     //return the size
@@ -123,8 +122,14 @@ public final class MyMap<K,V> implements Map<K,V> {
 
     //checks if the tree is empty
     public boolean isEmpty() {
-	return false;
+	if(root == null)
+	    {
+		return true;
+	    }
+	else
+	    {
+		return false;
+	    }
     }
-    
 	
 }
