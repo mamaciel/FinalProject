@@ -1,3 +1,10 @@
+/* 
+ * @authors Angela, Alex, Marcos
+ * @version 1.0 May 14 2019
+ * CS174 Final Project
+ * Compact Search Tree
+ **/
+
 import java.util.Map;
 import java.util.Set;
 import java.util.Collection;
@@ -10,10 +17,7 @@ public final class MyMap<K,V> implements Map<K,V> {
     private int size = 0;
     private Node root = null;
     
-    
-
-    //Constructor creates root
-    //testing github 
+    //main that tests the methods
     public static void main(String[] args){
 	/*
 	entries.put("apple", 1);
@@ -29,10 +33,13 @@ public final class MyMap<K,V> implements Map<K,V> {
 
     }
     
+    //return the size
     public int size() {
 	return this.size;
     }
     
+    //set a specific entry to a value
+    //return the entries
     public Set<Entry<K, V>> entrySet() {
 
 	return entries;
@@ -47,6 +54,7 @@ public final class MyMap<K,V> implements Map<K,V> {
 	return keys;
     }
 
+    //clear the tree
     public void clear() {
 	size = 0;
 	root = null;
@@ -75,24 +83,21 @@ public final class MyMap<K,V> implements Map<K,V> {
 	return null;
     }
 
+    
     public V put(final K key, final V value) {
 	//LinkedHashSet<Node> singleNode = new LinkedHashSet<Node>();
-	HashMap<K, Node> next = new HashMap<K, Node>();
-	//HashMap<K, V> next = new HashMap<K, V>();
+	HashMap<K, Node> nexts = new HashMap<K, Node>();
 	next.setVal(value);
 
 	for (Entry<K, V> entry : entries){
 	    
 	}
-    
 	
-	//if(key == (int)key){
-	// Entry<Integer, Intger> next = new Node<Integer, Integer>(key, value); 
-	//}
  	size++;
 	return null;
     }
 
+    //retrieve a specific key from the tree
     public V get(final Object key){
 	for (Entry<K, V> entry : entries){
 	    if(entry == key){
@@ -102,14 +107,17 @@ public final class MyMap<K,V> implements Map<K,V> {
 	return null;
     }
 
+    //determines if the tree contains a specific value
     public boolean containsValue(Object value) {
 	return false;
     }
 
+    //determines if the tree contains a specific key
     public boolean containsKey(Object key) {
 	return false;
     }
 
+    //checks if the tree is empty
     public boolean isEmpty() {
 	return false;
     }
