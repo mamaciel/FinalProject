@@ -1,17 +1,41 @@
 import java.util.*;
-
-public class Node{
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public boolean terminal;
-    V Value;
-=======
+public class Node<K,V>{
+    K key;
     V value;
-    
-=======
-    Set<V> value;
-    HashSet<Node> s = new HashSet<Node>();
->>>>>>> 1c93b3552b1de75644accdee6d7ddee6d35ea930
     boolean terminal;
->>>>>>> 8d5a7f38b819bb54a82f2116fccf2a8f3d89ab97
+
+    //HashMap<Character, Node> nexts;
+    HashMap<K, Node> root;
+    HashMap<K, Node> nexts;
+    //HashMap<K, V> next;
+
+
+    //public boolean hasNext(Character C){
+
+    //}
+    
+    Node getNext(Character nextKey){
+	return nexts.get(nextKey);	
+    }
+    
+    public V getVal(){
+	return this.value;
+    }
+
+    public K getKey(){
+	return this.key;
+    }
+
+    //public void setVal(K key, V value){
+    //	this.value = value;
+    //	this.key = key;
+    //}
+
+    public void setVal(V value){
+    	this.value = value;
+    }
+
+    public void setNext(K key){
+	this.key = key;
+    }
 }

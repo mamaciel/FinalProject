@@ -14,8 +14,8 @@ public class Node<K,V>{
 
     //}
     
-    Node getNext(Character nextKey){
-	return next.get(nextKey);	
+    public Node getNext(Character nextKey){
+	return nexts.get(nextKey);	
     }
     
     public V getVal(){
