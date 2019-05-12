@@ -34,8 +34,8 @@ public class Node<K,V>{
 	return this.value;
     }
 
-    public K getKey(){
-	return this.key;
+    public Character getKey(){
+	return this.a;
     }
 
     public void setVal(V value){
