@@ -133,25 +133,19 @@ public final class MyMap<K,V> implements Map<K,V> {
     //determines if the tree contains a specific key
     public boolean containsKey(Object key) {
 	char a = key.toString().charAt(0);
-<<<<<<< HEAD
+
 	Node temp = new Node<Character, V>(a);
 	if (temp.getKey() == key){
 	    return true;
 	}
 	else{
-=======
-	Node temp = new Node<Character, V>(a); 
-	if(temp.getKey() == key){
-	    return true;
-	}else{
->>>>>>> 869ac533564df45fbb73ee7b116bce3faccbee97
 	    return false;
 	}
     }
 
     //checks if the tree is empty
     public boolean isEmpty() {
-	if(root == null)
+	if(size == 0)
 	    {
 		return true;
 	    }
