@@ -4,14 +4,23 @@ public class Node<K,V>{
     V value;
     boolean terminal;
     Character a;
-    //HashMap<Character, Node> nexts;
-    //HashMap<K, Node> root;
-    HashMap<Character, Node> nexts = new HashMap<Character, Node>();
+    
+    HashMap<Character, Node> nexts;
+
+    Node nextNode = new Node();
     //HashMap<K, V> next;
 
+    public Node(){
+
+    }
+    
     public Node(Character a){
 	this.a = a;
     }
+
+    //public Node(HashMap<Character, Node> nexts){
+    //	this.nexts = nexts;
+    //}
 
     //public boolean hasNext(Character C){
 
@@ -38,13 +47,14 @@ public class Node<K,V>{
     	this.value = value;
     }
 
-    public void setNext(K key){
-	this.key = key;
+    public void setNext(Character a, HashMap<Character, Node> nexts){
+	this.a = a;
+	this.nexts = nexts;
 	//HashMap<K, Node> nexts;
 	//nexts.put(this.key);
     }
 
-    public HashMap<K, V> getNexts(){
+    public HashMap<Character, Node> getNexts(){
 	return this.nexts;
     }
 
