@@ -4,9 +4,7 @@ public class Node<K,V>{
     V value;
     boolean terminal;
     Character a;
-    //HashMap<Character, Node> nexts;
-    //HashMap<K, Node> root;
-    //HashMap<Character, Node> nexts = new HashMap<Character, Node>();
+    
     HashMap<Character, Node> nexts;
 
     Node nextNode = new Node();

@@ -91,8 +91,7 @@ public final class MyMap<K,V> implements Map<K,V> {
 	    root = null;
 	}
 	else{
-	String keyString = key.toString();
-	    
+	String keyString = key.toString();	    
 	for(int i = 0;i < keyString.length();i++){
 	    char a = keyString.charAt(i);
 	    Node temp = new Node<Character, V>(a);
