@@ -47,8 +47,9 @@ public class Node<K,V>{
     	this.value = value;
     }
 
-    public void setNext(K key){
-	this.key = key;
+    public void setNext(Character a, HashMap<Character, Node> nexts){
+	this.a = a;
+	this.nexts = nexts;
 	//HashMap<K, Node> nexts;
 	//nexts.put(this.key);
     }
