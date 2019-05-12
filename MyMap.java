@@ -21,7 +21,7 @@ public final class MyMap<K,V> implements Map<K,V> {
 
     //main that tests the methods
     public static void main(String[] args){
-	
+	//MyMap<K, V> map = new MyMap<K,V>();
 	//root.nexts.put("apple", 1);
 	/*entries.put("banana", 2);
 	entries.put("strawberry", 3);
@@ -143,14 +143,11 @@ public final class MyMap<K,V> implements Map<K,V> {
 
     //checks if the tree is empty
     public boolean isEmpty() {
-	if(root == null)
-	    {
+	if(size == 0) {
 		return true;
-	    }
-	else
-	    {
+	}else{
 		return false;
-	    }
+	}
     }
 	
 }
