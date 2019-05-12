@@ -21,7 +21,7 @@ public final class MyMap<K,V> implements Map<K,V> {
 
     //main that tests the methods
     public static void main(String[] args){
-	
+	//MyMap<K, V> map = new MyMap<K,V>();
 	//root.nexts.put("apple", 1);
 	/*entries.put("banana", 2);
 	entries.put("strawberry", 3);
@@ -72,13 +72,19 @@ public final class MyMap<K,V> implements Map<K,V> {
     
     //Copies all the elements of a map to another specific map
     public void putAll(final Map<? extends K, ? extends V> map) {
+	for(final K e : map.keySet()){
+	    put(e, map.get(e));
+	}
     }
 
     public V remove(final Object key) {
-	for(Entry<K, V> entry : entries){
-	    if(entry.getKey().equals(key)){
-		entry = null;
-		size--;
+	if(!entries.containsKey(key)){
+	    return null;
+	}
+	else{
+	    K first = entries.get(0);
+	    if(entries.size() == 1){
+		
 	    }
 	}
 	return null;
@@ -145,14 +151,16 @@ public final class MyMap<K,V> implements Map<K,V> {
 
     //checks if the tree is empty
     public boolean isEmpty() {
+<<<<<<< HEAD
 	if(size == 0)
 	    {
+=======
+	if(size == 0) {
+>>>>>>> 815dc9b213a41915393fedb21b4e62686c18b91f
 		return true;
-	    }
-	else
-	    {
+	}else{
 		return false;
-	    }
+	}
     }
 	
 }
