@@ -132,7 +132,14 @@ public final class MyMap<K,V> implements Map<K,V> {
 
     //determines if the tree contains a specific key
     public boolean containsKey(Object key) {
-	return false;
+	char a = key.toString().charAt(0);
+	Node temp = new Node<Character, V>(a);
+	if (temp.getKey() == key){
+	    return true;
+	}
+	else{
+	    return false;
+	}
     }
 
     //checks if the tree is empty

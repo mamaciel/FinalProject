@@ -38,20 +38,12 @@ public class Node<K,V>{
 	return this.key;
     }
 
-    //public void setVal(K key, V value){
-    //	this.value = value;
-    //	this.key = key;
-    //}
-
     public void setVal(V value){
     	this.value = value;
     }
 
-    public void setNext(Character a, HashMap<Character, Node> nexts){
-	this.a = a;
+    public void setNext(HashMap<Character, Node> nexts){
 	this.nexts = nexts;
-	//HashMap<K, Node> nexts;
-	//nexts.put(this.key);
     }
 
     public HashMap<Character, Node> getNexts(){
