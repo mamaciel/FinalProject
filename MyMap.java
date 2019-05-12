@@ -86,7 +86,7 @@ public final class MyMap<K,V> implements Map<K,V> {
 
     
     public V put(final K key, final V value) {
-	HashMap<Character, Node> nexts = new HashMap<Character, Node>();
+	//HashMap<Character, Node> nexts = new HashMap<Character, Node>();
 	if(size == 0){
 	    root = null;
 	}
