@@ -18,7 +18,9 @@ public final class MyMap<K,V> implements Map<K,V> {
     private int size = 0;
     private Node<K, V> root;
     private Node<K, V> tempNexts;
-
+    private Node<K, V> nexts;
+    private Node temp;
+    
     //main that tests the methods
     public static void main(String[] args){
 	//MyMap<K, V> map = new MyMap<K,V>();
@@ -97,7 +99,8 @@ public final class MyMap<K,V> implements Map<K,V> {
 	    root = null;
 	}
 	else{
-	String keyString = key.toString();	    
+	    Node<K,V> nexts = root;
+	    String keyString = key.toString();	    
 	for(int i = 0;i < keyString.length();i++){
 	    char a = keyString.charAt(i);
 	    Node temp = new Node<Character, V>(a);
@@ -105,12 +108,13 @@ public final class MyMap<K,V> implements Map<K,V> {
 	    //Node<K, V> temp = new Node<>(a);
 	    if(tempNexts.containsKey(a)){
 		temp = temp.setNext(new Node(a)); 
-	    }else{
+	    }
+	    else{
+		nexts.put(a, tempNexts);
+		
 		//temp = temp.setNext(
 	    }
 	}
-	
-	
 	//temp.setVal(value);
 	//LinkedHashSet<Node> singleNode = new LinkedHashSet<Node>();
 	//HashMap<K, Node> nexts = new HashMap<K, Node>();
@@ -151,14 +155,10 @@ public final class MyMap<K,V> implements Map<K,V> {
 
     //checks if the tree is empty
     public boolean isEmpty() {
-<<<<<<< HEAD
-	if(size == 0)
-	    {
-=======
 	if(size == 0) {
->>>>>>> 815dc9b213a41915393fedb21b4e62686c18b91f
 		return true;
-	}else{
+	}
+	else{
 		return false;
 	}
     }
