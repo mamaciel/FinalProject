@@ -50,6 +50,10 @@ public class Node<K,V>{
 	return this.nexts;
     }
 
+    public boolean isTerminal(){
+	return value != null;
+    }
+
     /*public boolean containsNexts(Character a, Node temp){
 	if(nexts.find(a, temp)){
 	    return true;
