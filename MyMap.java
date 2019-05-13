@@ -80,16 +80,17 @@ public final class MyMap<K,V> implements Map<K,V> {
     }
 
     public V remove(final Object key) {
-	if(!entries.containsKey(key)){
-	    return null;
+	String ab = (String)key;
+	Node<V> n = containsKey(ab);
+	if(n != null && n.isTerminal()){
+	    V old = n.value;
+	    n.value = null;
+	    size--;
+	    return old;
 	}
 	else{
-	    K first = entries.get(0);
-	    if(entries.size() == 1){
-		
-	    }
+	    return (n == null) ? null : n.value;
 	}
-	return null;
     }
 
     

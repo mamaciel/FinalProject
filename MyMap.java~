@@ -72,13 +72,19 @@ public final class MyMap<K,V> implements Map<K,V> {
     
     //Copies all the elements of a map to another specific map
     public void putAll(final Map<? extends K, ? extends V> map) {
+	for(final K e : map.keySet()){
+	    put(e, map.get(e));
+	}
     }
 
     public V remove(final Object key) {
-	for(Entry<K, V> entry : entries){
-	    if(entry.getKey().equals(key)){
-		entry = null;
-		size--;
+	if(!entries.containsKey(key)){
+	    return null;
+	}
+	else{
+	    K first = entries.get(0);
+	    if(entries.size() == 1){
+		
 	    }
 	}
 	return null;
